@@ -4,7 +4,7 @@ import { Block, TextView, Button } from '../components';
 import CareItem from './CareItem';
 import { Colors } from '../color';
 
-const CaseUpdate = () => {
+const CaseUpdate = ({ navigation }) => {
   return (
     <Block margin={10}>
       <Block justifyContent="space-between" direction="row">
@@ -12,7 +12,11 @@ const CaseUpdate = () => {
           <TextView h6>Case Update</TextView>
           <TextView>Newest Update June 28</TextView>
         </Block>
-        <Button textColor={Colors.blue1} style={{ marginTop: 2 }}>
+        <Button
+          textColor={Colors.blue1}
+          style={{ marginTop: 2 }}
+          onPress={() => navigation.navigate('Detail')}
+        >
           See details
         </Button>
       </Block>

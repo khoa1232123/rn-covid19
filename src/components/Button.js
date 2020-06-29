@@ -32,6 +32,7 @@ const Button = ({
   middle,
   children,
   shadow,
+  onPress,
   ...props
 }) => {
   const styleComponent = [
@@ -63,7 +64,7 @@ const Button = ({
 
   if (typeof children == 'string') {
     return (
-      <TouchableOpacity style={styleComponent} {...props}>
+      <TouchableOpacity style={styleComponent} onPress={onPress} {...props}>
         <Text style={styleText}>{children}</Text>
       </TouchableOpacity>
     );

@@ -14,13 +14,13 @@ import SpreadOfVirus from './modules/SpreadOfVirus';
 import NationalSelect from './modules/NationalSelect';
 import BgTop from './modules/BgTop';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <ScrollView style={{ backgroundColor: '#fafafa' }}>
       <Block block>
         <BgTop />
         <NationalSelect />
-        <CaseUpdate />
+        <CaseUpdate navigation={navigation} />
         <SpreadOfVirus />
       </Block>
     </ScrollView>
